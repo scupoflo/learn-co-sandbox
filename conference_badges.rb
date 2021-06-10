@@ -5,13 +5,13 @@ speakers = ["Edsger", "Ada", "Charles", "Alan", "Grace", "Linus", "Matz"]
 end
 
  def batch_badge_creator(speakers)
-  speakers.each do |speaker|
+  speakers.map do |speaker|
     "Hello, my name is #{speaker}."
   end
 end
 
  def assign_rooms(speakers)
-  speakers.each_with_index do |attendee, index|
+  speakers.each_with_index.map do |attendee, index|
     "Hello, #{attendee}! You'll be assigned to room #{index+1}!"
   end
 end
